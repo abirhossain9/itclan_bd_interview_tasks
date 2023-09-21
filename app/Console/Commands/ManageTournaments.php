@@ -46,7 +46,7 @@ class ManageTournaments extends Command
         $candidates = $data;
         $this->createTournament();
         $this->updateIdeas($data);
-        $endTime = Carbon::now()->addMinutes(3);
+        $endTime = Carbon::now()->addMinutes(15);
         $step = 1;
 
         while (Carbon::now() < $endTime) {
@@ -59,7 +59,7 @@ class ManageTournaments extends Command
                 $this->tournamentUpdate($step, $winner->toArray());
                 $mailSendEndTime = microtime(true);
                 $timeTakenInSeconds = $mailSendEndTime - $stepStartTime;
-                sleep(60-$timeTakenInSeconds);
+                sleep(300-$timeTakenInSeconds);
                 $step = $step+1;
             }
         }
@@ -90,7 +90,7 @@ class ManageTournaments extends Command
         $this->tournament = new Tournament();
         $this->tournament->tournament_id = uniqid();
         $this->tournament->start_time = Carbon::now();
-        $this->tournament->end_time = Carbon::now()->addMinutes(3);
+        $this->tournament->end_time = Carbon::now()->addMinutes(15);
         $this->tournament->tournament_step = 1;
         $this->tournament->save();
     }
