@@ -5,3 +5,4 @@
 -   Run Migration.
 -   Npm install and npm run dev.
 -   Php artisan serve.
+-   run queue
