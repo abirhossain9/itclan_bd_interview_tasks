@@ -1,0 +1,7 @@
+-   Clone the repository.
+-   Run Composer install.
+-   Set app key.
+-   Setup .env.
+-   Run Migration.
+-   Npm install and npm run dev.
+-   Php artisan serve.
