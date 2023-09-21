@@ -1,8 +1,8 @@
 -   Clone the repository.
 -   Run Composer install.
 -   Set app key.
--   Setup .env.
+-   Setup env (mail, queue connection)
 -   Run Migration.
--   Npm install and npm run dev.
--   Php artisan serve.
+-   npm install and npm run dev.
+-   php artisan serve
 -   run queue
